@@ -5,6 +5,7 @@
 conda create -n mamba python=3.11
 conda activate mamba
 conda install cudatoolkit==12.1 -c nvidia
+conda install cuda-nvcc=11.8 -c nvidia  # maybe
 pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cu121
 pip install causal-conv1d
 pip install mamba-ssm
