@@ -22,11 +22,18 @@ pip install mamba-ssm
 - https://github.com/state-spaces/mamba/releases/download/v2.2.2/mamba_ssm-2.2.2+cu122torch2.3cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
 
 When installing selective_scan, it is important to pay attention to the CUDA_HOME parameter. By default, this parameter is set to /usr/local/cuda in the code. If it is not, you can modify it through the following code:
-
+```python
 export CUDA_HOME=/usr/local/cuda
 
 export PATH=$CUDA_HOME/bin:$PATH
 
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-
+```
 You can use python setup.py clean to check the CUDA_HOME path. Also, check the outputs of nvcc --version and g++ --version, as well as print(torch.cuda.is_available()) and print(torch.version.cuda).
+```python
+python setup.py
+nvcc --version
+g++ --version
+print(torch.cuda.is_available())
+print(torch.version.cuda)
+```
