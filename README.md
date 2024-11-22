@@ -23,7 +23,7 @@ pip install mamba-ssm
 
 When installing selective_scan, it is important to pay attention to the CUDA_HOME parameter. By default, this parameter is set to /usr/local/cuda in the code. If it is not, you can modify it through the following code:
 ```python
-export CUDA_HOME=/usr/local/cuda
+export CUDA_HOME=/usr/local/cuda      # (Maintain consistency with the address in nvcc -- version)
 
 export PATH=$CUDA_HOME/bin:$PATH
 
