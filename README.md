@@ -29,6 +29,10 @@ export PATH=$CUDA_HOME/bin:$PATH
 
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
 ```
+When installing the selective_stcan package, it is necessary to install the complete CUDatoolkit package on Ubuntu. The tutorial reference is as follows
+```python
+https://zhuanlan.zhihu.com/p/7299923217
+```
 You can use python setup.py clean to check the CUDA_HOME path. Also, check the outputs of nvcc --version and g++ --version, as well as print(torch.cuda.is_available()) and print(torch.version.cuda).
 ```python
 which nvcc
