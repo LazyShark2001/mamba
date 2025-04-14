@@ -44,12 +44,19 @@ print(torch.version.cuda)
 ```
 nvcc globle
 
-编辑全局配置文件
+1.编辑全局配置文件:
+
 nano ~/.bashrc
-在文件末尾添加：
+
+2.在文件末尾添加：
+
 export PATH=/usr/local/cuda/bin:$PATH
-生效配置：
+
+3.生效配置：
+
 source ~/.bashrc
-验证：
+
+4.验证：
+
 conda activate your_env
 which nvcc  # /usr/local/cuda/bin/nvcc
