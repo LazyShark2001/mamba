@@ -4,9 +4,8 @@
 ```python
 conda create -n mamba python=3.11
 conda activate mamba
-conda install cuda-toolkit=12.1 -c nvidia # maybe
 pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cu121
-conda install cuda-nvcc=12.1 -c nvidia  # maybe
+(sudo apt install -y cuda-toolkit-12-3)
 pip install causal-conv1d
 pip install mamba-ssm
 ```
@@ -43,3 +42,14 @@ g++ --version
 print(torch.cuda.is_available())
 print(torch.version.cuda)
 ```
+nvcc globle
+
+编辑全局配置文件
+nano ~/.bashrc
+在文件末尾添加：
+export PATH=/usr/local/cuda/bin:$PATH
+生效配置：
+source ~/.bashrc
+验证：
+conda activate your_env
+which nvcc  # /usr/local/cuda/bin/nvcc
