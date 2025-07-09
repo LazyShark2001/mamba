@@ -11,6 +11,7 @@ pip install mamba-ssm
 ```
 
 1, 安装mamba和conv1d的时候一定要关注自己电脑中的nvcc和cuda是否为全局的cuda包, 只有全局的cuda包和nvcc才能顺利编译
+
 2, 安装过程中经常出现卡住的现象, 这可能是由于编译过程中需要下载其他包, 而那些包在外网, 内网连接不到导致无响应, 此时可手动下载安装, 规范如下
 
 - If there is no response when installing causal-conv1d and mamba-ssm, please download the local package and decompress it directly. If downloading the whl file fails, please download and install it manually.
