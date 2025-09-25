@@ -37,6 +37,10 @@ When installing the selective_stcan package, it is necessary to install the comp
 ```python
 https://zhuanlan.zhihu.com/p/7299923217
 ```
+在有驱动的情况下，可以使用以下代码安装，安装完成后需要设置nvcc位置并重启终端
+```python
+sudo apt install -y cuda-toolkit-12-3
+```
 Do you also need to use/us/local/CUDA-12.4/bin/nvcc for nvcc??
 You can use python setup.py clean to check the CUDA_HOME path. Also, check the outputs of nvcc --version and g++ --version, as well as print(torch.cuda.is_available()) and print(torch.version.cuda).
 ```python
